@@ -11,9 +11,22 @@ class ListaEnlazada:
         return self.cabeza == None
 
     def agregar_inicio(self, dato):
-        temp = Nodo(dato)
-        temp.siguiente = self.cabeza
-        self.cabeza = temp
+        nuevo = Nodo(dato)
+        nuevo.siguiente = self.cabeza
+        self.cabeza = nuevo
+
+    def agregar_final(self, dato):
+        nuevo = Nodo(dato)
+
+        if self.cabeza is None:
+            self.cabeza = nuevo
+            return
+        
+        actual = self.cabeza
+        while actual.siguiente is not None:
+            actual = actual.siguiente
+
+        actual.siguiente = nuevo
 
     def recorrido_seguro(self):
         actual = self.cabeza
