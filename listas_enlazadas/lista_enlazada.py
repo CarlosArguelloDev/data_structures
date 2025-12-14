@@ -35,3 +35,12 @@ class ListaEnlazada:
             actual = actual.siguiente
         print("None")
 
+    def contar(self):
+        contador = 0
+        actual = self.cabeza
+
+        while actual is not None:
+            contador += 1
+            actual = actual.siguiente
+
+        return contador
