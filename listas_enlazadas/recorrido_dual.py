@@ -30,7 +30,7 @@ while actual1 or actual2 or carry:
     if actual2:
         actual2 = actual2.siguiente
 
-print(l_res.recorrido_seguro())
+l_res.recorrido_seguro()
 
 
 
